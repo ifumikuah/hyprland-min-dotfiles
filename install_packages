@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo pacman -S git
+sudo usermod -aG video $USER
+
+git clone https://aur.archlinux.org/yay.git
+
+yay -S xdg-user-dirs man-db man-pages hyprland hyprpaper ttf-liberation ttf-dejavu pipewire pipewire-alsa pipewire-pulse wireplumber alsa-utils noto-fonts-cjk inotify-tools otf-font-awesome ttf-roboto inter-font brightnessctl rofi-wayland ttf-hack greetd-regreet greetd gnome-themes-extra adwaita-icon-theme pcmanfm-gtk3 polkit-kde-agent swaync qt5-wayland qt6-wayland stow firefox

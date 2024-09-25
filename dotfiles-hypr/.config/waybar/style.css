@@ -1,0 +1,56 @@
+@import "themes/mocha.css";
+
+* {
+	font-size: 14px;
+	font-family: Roboto, "Font Awesome 6 Free Solid";
+}
+
+window#waybar {
+	background: @base;
+	color: @text;
+	border-radius: 5px;
+}
+
+#workspaces button {
+	color: @text;
+	border: 0;
+	border-radius: 0;
+}
+
+#workspaces button.active
+{
+	background-color: alpha(@text, 0.20);
+	border-radius: 0;
+}
+
+#workspaces button:hover
+{
+	box-shadow: none;
+	background: alpha(@text, 0.15);
+	color: @text;
+	border-radius: 0;
+	border: none;
+}
+
+#clock
+{
+	font-size: large;
+}
+
+#clock,
+#network,
+#backlight,
+#pipewire,
+#custom-notify,
+#workspaces,
+#disk {
+	padding: 0 15px;
+}
+
+.modules-right {
+	padding-right: 15px;
+}
+
+.modules-left {
+	padding-left: 15px;
+}

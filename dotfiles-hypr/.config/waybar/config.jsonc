@@ -1,0 +1,84 @@
+// -*- mode: json -*-
+{
+	"reload_style_on_change": true,
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"network",
+		// "backlight",
+		"wireplumber",
+		"custom/notify",
+		"tray"
+	],
+	// "hyprland/workspaces": {
+	// 	"disable-scroll": false,
+	// 	"format": "{name}"
+	// },
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%A, %d %B %Y}"
+	},
+	// "clock#2": {
+	// 	"format": "{:%A, %d %B}",
+	// 	"tooltip": false
+	// },
+	"custom/launcher": {
+		"on-click": "rofi -show drun",
+		"format": "{icon}",
+		"tooltip": false,
+		"format-icons": ""
+	},
+	"custom/powermenu": {
+		"on-click": "rofi -show powermenu -modi powermenu:~/rofi-power-menu/rofi-power-menu",
+		"format": "{icon}",
+		"tooltip": false,
+		"format-icons": ""
+	},
+	"custom/notify": {
+		"on-click": "swaync-client -t",
+		"format": "{icon}",
+		"tooltip": false,
+		"format-icons": ""
+	},
+	"backlight": {
+		"tooltip": false,
+		"format": "{icon} {percent}%",
+		"format-icons": {
+			"default": ""
+		},
+		"device": "intel_backlight",
+		"on-scroll-up": "brightnessctl s +10%",
+		"on-scroll-down": "brightnessctl s 10%-"
+	},
+	"network": {
+		"tooltip": false,
+		"format": "{icon} {ifname}",
+		"format-wifi": " {essid}"
+	},
+	"wireplumber": {
+		"tooltip": false,
+		"format": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5
+	},
+	"tray": {
+		"icon-size": 20
+	},
+	"margin-top": 5,
+	"margin-left": 5,
+	"margin-right": 5
+}
